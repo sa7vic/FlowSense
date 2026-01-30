@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlowSense</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div id="start-screen" class="screen">
+      <div class="header">
+        <h1>FlowSense</h1>
+        <p class="subtitle">Cognitive Alignment</p>
+      </div>
+      <form id="start-form">
+        <label>Task Type</label>
+        <select id="task-type">
+          <option value="CODING">Coding</option>
+          <option value="VIDEO_LEARNING">Video Learning</option>
+          <option value="TYPING">Writing</option>
+        </select>
+        <label>Duration (minutes)</label>
+        <input type="number" id="duration" value="25" min="5" max="120">
+        <button type="submit" class="btn-primary">Start Session</button>
+      </form>
+
+      <p id="error" class="error"></p>
+    </div>
+    <div id="active-screen" class="screen hidden">
+      <div class="top-bar">
+        <span id="task-badge" class="badge">Coding</span>
+        <button id="end-btn" class="btn-icon" title="End Session">x</button>
+      </div>
+      <div class="timer-wrap">
+        <svg class="timer-svg" viewBox="0 0 100 100">
+          <circle class="timer-bg" cx="50" cy="50" r="42"/>
+          <circle id="timer-ring" class="timer-ring" cx="50" cy="50" r="42"/>
+        </svg>
+        <div class="timer-text">
+          <span id="time-elapsed">0:00</span>
+          <span id="time-total">/ 25:00</span>
+        </div>
+      </div>
+      <div id="state-box" class="state-box aligned">
+        <span id="state-label">Aligned</span>
+      </div>
+      <div class="score-row">
+        <div class="score-item">
+          <span id="score-value">100</span>
+          <span class="score-label">Score</span>
+        </div>
+        <div class="score-item">
+          <span id="stability-value">100%</span>
+          <span class="score-label">Stability</span>
+        </div>
+      </div>
+      <button id="pause-btn" class="btn-secondary">
+        <span id="pause-text">Pause</span>
+      </button>
+    </div>
+    <div id="timeup-overlay" class="overlay hidden">
+      <div class="overlay-content">
+        <h2>Time's Up</h2>
+        <button id="view-dashboard" class="btn-primary">View Dashboard</button>
+        <button id="extend-btn" class="btn-secondary">Continue +5 min</button>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
