@@ -15,16 +15,10 @@ FlowSense Dashboard is a **cognitive mirror**, not a performance tracker. It ans
 ✅ Exposes causality, not rankings  
 ✅ Never shames, ranks, or judges cognition  
 
-❌ No leaderboards  
-❌ No streaks  
-❌ No dopamine UI  
-❌ No notifications  
-
 ## 🏗️ Architecture
 
 ### Tech Stack
 - **React 18** - UI framework
-- **Vite** - Build tool
 - **Recharts** - Data visualization
 - **CSS Modules** - Component styling
 
@@ -34,23 +28,23 @@ FlowSense Dashboard is a **cognitive mirror**, not a performance tracker. It ans
 dashboard/
 ├── src/
 │   ├── components/
-│   │   ├── SessionTimeline.jsx       # 1️⃣ Primary cognitive state timeline
-│   │   ├── AlignmentCurve.jsx        # 2️⃣ Attention coherence graph
-│   │   ├── DriftReplay.jsx           # 3️⃣ Causal analysis of drift events
-│   │   ├── FatigueMap.jsx            # 4️⃣ Engagement density visualization
-│   │   ├── CognitiveFingerprint.jsx  # 5️⃣6️⃣ Long-term pattern profile
-│   │   ├── InsightPanel.jsx          # 7️⃣ GenAI reflection display
-│   │   ├── ComparativeView.jsx       # 8️⃣ Self vs past self (ethical)
+│   │   ├── SessionTimeline.jsx       
+│   │   ├── AlignmentCurve.jsx       
+│   │   ├── DriftReplay.jsx           
+│   │   ├── FatigueMap.jsx            
+│   │   ├── CognitiveFingerprint.jsx  
+│   │   ├── InsightPanel.jsx          
+│   │   ├── ComparativeView.jsx       
 │   │   └── Header.jsx
 │   ├── context/
-│   │   └── ThemeContext.jsx          # Light/dark mode system
+│   │   └── ThemeContext.jsx          
 │   ├── services/
-│   │   └── api.js                    # Backend integration layer
+│   │   └── api.js                    
 │   ├── data/
-│   │   └── sampleData.js             # Mock data matching backend format
+│   │   └── sampleData.js             
 │   ├── styles/
-│   │   └── globals.css               # Calm, low-saturation design system
-│   ├── App.jsx                       # Main dashboard orchestration
+│   │   └── globals.css               
+│   ├── App.jsx                       
 │   └── main.jsx
 ```
 
@@ -166,15 +160,6 @@ VITE_API_URL=http://localhost:5000/api npm run dev
 
 ## 🛡️ Ethical Safeguards
 
-### What the UI Does NOT Do
-- ❌ Compute analytics (backend only)
-- ❌ Score users
-- ❌ Gamify behavior
-- ❌ Enforce productivity
-- ❌ Rank against others
-- ❌ Use guilt language
-- ❌ Show notifications
-
 ### Privacy Guarantees
 - All data is user-private
 - No social comparison features
@@ -189,21 +174,6 @@ VITE_API_URL=http://localhost:5000/api npm run dev
 - Color-blind safe palette
 - Respects `prefers-reduced-motion`
 - Mobile-responsive layout
-
-## 🎯 Development Guidelines
-
-### When Adding Features
-1. Ask: "Does this judge or reflect?"
-2. Avoid celebratory language
-3. Use descriptive labels, not scores
-4. No red/green success/failure semantics
-5. Maintain calm visual language
-
-### Component Rules
-- All visualizations must be **descriptive**, not prescriptive
-- Preserve backend insights verbatim (no rewriting)
-- Empty states should be calm, not motivational
-- No countdown timers or urgency signals
 
 ## 🔄 Backend Integration
 
